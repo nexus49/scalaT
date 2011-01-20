@@ -1,4 +1,4 @@
-package your.proj.gid;
+package com.scalat;
 
 import junit.framework._;
 import Assert._;
