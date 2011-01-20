@@ -1,3 +1,8 @@
 Scala Repository for testing various approaches using scala. 
 
 Every approach is supposed to be done in a separate branch.
+
+---------
+Branch: scalaHibernate
+
+Approach to use scala to persist data using hibernate.
