@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>your.proj.gid</groupId>
+	<groupId>scala_hibernate.gid</groupId>
 	<artifactId>scala_hibernate</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<inceptionYear>2008</inceptionYear>
 	<properties>
-		<scala.version>2.6.1</scala.version>
+		<scala.version>2.8.1</scala.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -69,6 +70,17 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>3.6.0.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.3.149</version>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.10.0.GA</version>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src/main/scala</sourceDirectory>
@@ -86,9 +98,6 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-					<scalaVersion>${scala.version}</scalaVersion>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
